@@ -6,7 +6,6 @@
 
 - Install docker and docker compose, and add non-root docker user. 
   - https://docs.docker.com/engine/install/ubuntu/
-  - https://docs.docker.com/compose/install/
   - https://docs.docker.com/engine/install/linux-postinstall/
 
 ## How to use
@@ -16,22 +15,22 @@
 - build container
 ~~~
 $ . setenv.sh
-$ docker-compose build
+$ docker compose build
 ~~~
 
 - start container
 ~~~
 $ . setenv.sh
-$ docker-compose up -d
+$ docker compose up -d
 ~~~
 
 - enter/re-enter container
 ~~~
-$ docker-compose exec app /bin/bash
+$ docker compose exec app /bin/bash
 ~~~
 
 - stop container
 ~~~
-$ docker-compose down
+$ docker compose down
 ~~~
 

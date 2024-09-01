@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        - DOCKER_UID=${LOCAL_UID}
+        - DOCKER_GID=${LOCAL_GID}  
+    privileged: true
+    tty: true
+    command: /bin/bash
+    volumes:
+      - /tmp/:/tmp/
+      - /home/${USER}/${WORK_DIR}:/home/user/work
+      - /home/${USER}/.qnx:/home/user/.qnx
+      - /home/${USER}/qnx710:/home/user/qnx710
+
+
+
